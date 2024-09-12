@@ -39,7 +39,7 @@ export default function HomeScreen({ navigation, route }) {
     useState(displayMap);
   const [placeInfo, setPlaceInfo] = useState(null);
   const [curDisplayedCoords, setCurDisplayedCoords] = useState(null);
-  Location.setGoogleApiKey("AIzaSyBTdr8CLXqeUAP0ydSc1rDQpd4i-d0iDoU");//"AIzaSyAmfA4oxv5I89pva6dp-mQDC1ZxJApfPho");
+  Location.setGoogleApiKey("[fill in]");
 
   const [selectedGroupInfo, setSelectedGroupInfo] = useState(selectedGroup); // object of selected group info. (also has members, created Date)
   // index: index of selected group in groups array (int)
@@ -95,7 +95,7 @@ export default function HomeScreen({ navigation, route }) {
 
     axios({
       method: "get",
-      url: `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=formatted_address,name&key=AIzaSyBTdr8CLXqeUAP0ydSc1rDQpd4i-d0iDoU`,//AIzaSyAlXol8kTHp1bqRowon8Z0TmgntF1YLT1g`,
+      url: `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=formatted_address,name&key=[fill in]`,
       headers: {},
     })
       .then(function (response) {
